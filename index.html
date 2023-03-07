@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheBharatExpress</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="upper__nav">
+            <div>
+            <div class="time">mod</div>
+            <div class="date">ddd</div>
+            </div>
+            <div>
+                <h1 class="heading">The<i> Bharat </i><strong>Express</strong></h1>
+            </div>
+            <ul class="social-links">
+                <li><a class="upper__nav-link" href="#"><ion-icon class="social-icon"name="logo-instagram"></ion-icon></a></li>
+                <li><a class="upper__nav-link" href="#"><ion-icon class="social-icon"name="logo-facebook"></ion-icon></ion-icon></a></li>
+                <li><a class="upper__nav-link" href="#"><ion-icon class="social-icon"name="logo-twitter"></ion-icon></ion-icon></a></li>
+            </ul>
+            
+        </div>
+        <nav class="nav">
+            <ul class="nav__links">
+                <li class="nav__item"><a class="nav__link rendernav" href="#">Home</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">hatke</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">national</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">sports</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">world</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">technology</a></li>
+            </ul>
+            <a class="nav__link nav__link--btn" href="#">Subscribe</a>
+        </nav>
+    </header>
+    <div class="message"></div>
+    <main class="main">
+    <section class="news_section">
+        <!-- <div class="Hori_card">
+            <div class="Hori_news_img">
+                <img src="certificate.jpg" alt="News png">
+            </div>
+            <div class="news_info">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur necessitatibus nulla, itaque excepturi id consectetur. Dicta, eum ullam. Perferendis ullam eaque quis officia quibusdam, odio sunt! Voluptatum, aperiam. Consectetur, atque?</p>
+            </div>
+        </div> -->
+    </section>
+    <div class="border"></div>
+    <section class="news_section_hori">
+    </section>
+    </main>
+    <footer class="pagination_section">
+        <div class="pagination">
+            <button class="btn_page btn--left">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon_left">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                  </svg>          
+            </button>
+            <a href="#" class="number render">1</a>
+            <a href="#" class="number">2</a>
+            <a href="#" class="number">3</a>
+            <span class="dots">...</span>
+            <a href="#" class="number">4</a>
+            <!-- <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number fill--btn">3</button>
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <span class="dots">...</span>
+            <button class="number">27</button> -->
+            <button class="btn_page btn--right">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon_right">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                  </svg>              
+            </button>
+        </div>
+    </footer>
+    
+    <div class="modal hidden">
+        <button class="btn--close-modal">&times;</button>
+        <h2 class="modal__header">
+            Subscribe and stay updated with the latest insightful content delivered to your inbox
+        </h2>
+        <form class="modal__form">
+          <label>First Name</label>
+          <input type="text" />
+          <label>Last Name</label>
+          <input type="text" />
+          <label>Email Address</label>
+          <input type="email" />
+          <button class="btn">Next step &rarr;</button>
+        </form>
+      </div>
+      <div class="overlay hidden"></div>
+    <script src="script.js"></script>
+</body>
+</html>
