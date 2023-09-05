@@ -6,7 +6,14 @@ const API_URL = "https://inshorts.deta.dev/news?category=";
 let News_count = 0;
 let category = `all`;
 
-
+const headers = {'Content-Type':'application/json',
+                    'Access-Control-Allow-Origin':'*',
+                    'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'}
+const REQ = {
+    method:'GET',
+    statusCode: 200,
+    headers:headers,
+};
 const Wait = () => {
   pagination.style.opacity = 0;
   document.querySelector(".main").style.opacity = 0;
@@ -47,8 +54,8 @@ const getNews = async function (category = `all`, ind = 1) {
   newsContainer.innerHTML = "";
   horinewsContainer.innerHTML = "";
   try {
-    const res = await fetch(API_URL + category);
-    const res2 = await fetch(API_URL + `miscellaneous`);
+    const res = await fetch(API_URL + category,REQ);
+    const res2 = await fetch(API_URL + `miscellaneous`,REQ);
 
     const news = await res.json();
     const news2 = await res2.json();
