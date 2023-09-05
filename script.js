@@ -2,18 +2,11 @@ const newsContainer = document.querySelector(".news_section");
 const horinewsContainer = document.querySelector(".news_section_hori");
 const dataEL = document.querySelector(".data__span");
 const pagination = document.querySelector(".pagination");
-const API_URL = "https://inshorts.deta.dev/news?category=";
+const API_KEY = "853e0efea20447e898c0a1230bf458fc";
 let News_count = 0;
-let category = `all`;
+let category = `top-headlines`;
+// top-headlines
 
-const headers = {'Content-Type':'application/json',
-                    'Access-Control-Allow-Origin':'*',
-                    'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'}
-const REQ = {
-    method:'GET',
-    statusCode: 200,
-    headers:headers,
-};
 const Wait = () => {
   pagination.style.opacity = 0;
   document.querySelector(".main").style.opacity = 0;
@@ -50,20 +43,20 @@ const renderHoriNews = function (data) {
     </div>`;
   horinewsContainer.insertAdjacentHTML("afterbegin", html);
 };
-const getNews = async function (category = `all`, ind = 1) {
+const getNews = async function (category = `top-headlines`, ind = 1) {
   newsContainer.innerHTML = "";
   horinewsContainer.innerHTML = "";
   try {
-    const res = await fetch(API_URL + category,REQ);
-    const res2 = await fetch(API_URL + `miscellaneous`,REQ);
+    const res = await fetch(`https://newsapi.org/v2/${category}/sources?${API_KEY}`);
+    const res2 = await fetch(`https://newsapi.org/v2/technology/sources?${API_KEY}`);
 
     const news = await res.json();
     const news2 = await res2.json();
     console.log(news);
-    const result = news.data;
+    const result = news.sources;
     const length = result.length / 4;
     console.log(news2);
-    const result2 = news2.data;
+    const result2 = news2.sources;
     result.slice(News_count, length * ind).forEach((data) => {
       renderNews(data);
     });
