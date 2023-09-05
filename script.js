@@ -23,10 +23,10 @@ const renderNews = function (data) {
         <img src="${data.imageUrl}" alt="certificate">            
     </div>
     <div class="news_info">
-        <h1 class="news_heading">${data.title}</h1>
-        <p class="news_para">${data.content}</p>
+        <h1 class="news_heading">${data.id}</h1>
+        <p class="news_para">${data.description}</p>
     </div>
-    <button class="readbtn"><a href="${data.readMoreUrl}" target="_blank">Read More!</a></button>
+    <button class="readbtn"><a href="${data.url}" target="_blank">Read More!</a></button>
     </div>`;
   newsContainer.insertAdjacentHTML("afterbegin", html);
 };
@@ -37,8 +37,8 @@ const renderHoriNews = function (data) {
         <img src="${data.imageUrl}" alt="News png">
     </div>
     <div class="news_info hori">
-        <h2>${data.title}</h2>
-        <p>${data.content}</p>
+        <h2>${data.id}</h2>
+        <p>${data.description}</p>
     </div>
     </div>`;
   horinewsContainer.insertAdjacentHTML("afterbegin", html);
